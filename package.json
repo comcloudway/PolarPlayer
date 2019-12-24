@@ -1,0 +1,16 @@
+{
+  "name": "polarplayer",
+  "version": "1.0.0",
+  "description": "Equator Player for the Web",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mpe": "^1.0.4"
+  }
+}
