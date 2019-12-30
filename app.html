@@ -1,13 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="stylesheet" href="ui/app.css">
     <title>Document</title>
 </head>
+
 <body style="width: 100vw;height: 100vh;">
+    <div class="app">
+        <div class="config">
+            <div class="row">
+                <p class="name">Mode</p>
+                <div class="item" onclick="setMode('sine')">
+                    <div class="name">Sine</div>
+                </div>
+                <div class="item" onclick="setMode('square')">
+                    <div class="name">Square</div>
+                </div>
+                <div class="item" onclick="setMode('triangle')">
+                    <div class="name">Triangle</div>
+                </div>
+                <div class="item" onclick="setMode('sawtooth')">
+                    <div class="name">Sawtooth</div>
+                </div>
+            </div>
+            <div class="row">
+                <p class="name">Tone</p>
+                <div class="item">
+                    <div class="name">Item</div>
+                </div>
+                <div class="item">
+                    <div class="name">Item</div>
+                </div>
+            </div>
+        </div>
+        <div class="keyboard"></div>
+        <div class="dialog" id="dialog_start">
+            <p class="title">Connect & Run PolarPlayer</p>
+            <div class="btn" id="start_btn">Run</div>
+        </div>
+    </div>
     <script src="node_modules/mpe/lib/mpe.min.js"></script>
+   
     <script src="app.js"></script>
+    <script src="ui/ui.js"></script>
 </body>
+
 </html>

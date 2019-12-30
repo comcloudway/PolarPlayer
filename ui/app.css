@@ -1,0 +1,116 @@
+/* 
+rgb(255, 255, 255)- white
+rgb(87, 82, 163)  - purple
+rgb(73, 128, 128) - dark blue
+rgb(25, 176, 176) - blue 
+rgb(235, 147, 33) - orange
+*/
+body {
+    background: url("../res/wallpaper.jpg") no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+}
+.app {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+.app .config {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow: hidden;
+    overflow-y: auto;
+    justify-content: center;
+    align-items: center;
+}
+.app .config .row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+    margin: 2%;
+    min-height: 50%;
+    height: auto;
+    overflow: auto;
+    flex-wrap: wrap;
+}
+.app .config .row .name {
+    white-space: pre-line;
+}
+.app .config .row .item {
+    padding: 7.5%;
+    margin: 2.5%;
+    color: rgba(235, 147, 33,0.8);
+    border: 3px solid rgba(235, 147, 33,0.8);
+    border-radius: 10px;
+    background-color:transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: background-color .2s, color .2s;
+}
+.app .config .item:hover {
+    color: white;
+    background-color: rgba(235, 147, 33,0.8);
+}
+.app .keyboard {
+    z-index: 5;
+    border-top: 3px solid rgb(235, 147, 33);
+    background-color: rgba(255, 255, 255, 0.4);
+    width: 100%;
+    height: 30%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+
+.dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.85);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.dialog * {
+    margin: 2%;
+}
+.dialog .title {
+    font-family: monospace;
+    font-weight: 900;
+    font-size: 300%;
+}
+.dialog .btn {
+    color: rgb(235, 147, 33);
+    border: 3px solid rgb(235, 147, 33);
+    border-radius: 10px;
+    background-color: transparent;
+    padding: 7.5%;
+    transition: background-color .3s, color .3s;
+    font-family: monospace;
+    font-weight: 900;
+    font-size: 150%;
+}
+.dialog .btn:hover {
+    color: rgba(255, 255, 255, 0.9);
+    background-color: rgb(235, 147, 33);
+}
